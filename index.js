@@ -7,15 +7,15 @@ const nodemailer = require('nodemailer');
 const multer = require('multer');
 
 // OneSignal credentials
-const ONE_SIGNAL_APP_ID = '5ed5769f-18ad-4c4b-8ba8-b83519ddc871';  // Replace with your OneSignal App ID
-const REST_API_KEY = 'os_v2_app_l3kxnhyyvvgexc5ixa2rtxoiohfydb7eog4eeg5ila4pxwzxcg4762nmufs5x33zh6owmn3ua5mqtq3o2z4eyhdh53nz3fqhgniodma';  // Replace with your OneSignal REST API Key
+const ONE_SIGNAL_APP_ID = '5ed5769f';  // Replace with your OneSignal App ID
+const REST_API_KEY = 'os_v2_app_xwz';  // Replace with your OneSignal REST API Key
 
 // Email configuration (using nodemailer)
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Example with Gmail. Change this for your provider.
     auth: {
-      user: 'pythonblynk@gmail.com', // Replace with your email
-      pass: 'tzvbcquppgywtieq',  // Replace with your email password (or app-specific password)
+      user: 'example@gmail.com', // Replace with your email
+      pass: 'tzvb',  // Replace with your email password (or app-specific password)
     },
   });
 
@@ -86,7 +86,7 @@ app.post('/api/send-email', upload.single('image'), (req, res) => {
 
     // Prepare the email with attachment
     const mailOptions = {
-        from: 'pythonblynk@gmail.com',
+        from: 'example@gmail.com',
         to: toaddr,
         subject: "Notification",
         title: title,
